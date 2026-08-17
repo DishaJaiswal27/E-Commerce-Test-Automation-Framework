@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 target/
 .classpath
 .project
@@ -12,3 +13,4 @@ screenshots/
 *.iml
 
 .DS_Store
+
