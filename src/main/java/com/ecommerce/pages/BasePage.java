@@ -41,4 +41,12 @@ public class BasePage {
 
 		return driver.findElement(locator).isDisplayed();
 	}
+
+	protected String getPageTitle() {
+		return driver.getTitle();
+	}
+
+	protected String getCurrentUrl() {
+		return driver.getCurrentUrl();
+	}
 }

@@ -1,9 +1,11 @@
 package com.ecommerce.driver;
 
-import com.ecommerce.config.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.ecommerce.config.ConfigReader;
 
 public class DriverFactory {
 
@@ -15,7 +17,14 @@ public class DriverFactory {
 
 		if (browser.equalsIgnoreCase("chrome")) {
 
-			driver = new ChromeDriver();
+			
+			ChromeOptions options = new ChromeOptions();
+
+			options.addArguments("--disable-notifications");
+			options.addArguments("--disable-popup-blocking");
+			options.addArguments("--incognito");
+
+			driver = new ChromeDriver(options);
 
 		} else if (browser.equalsIgnoreCase("firefox")) {
 

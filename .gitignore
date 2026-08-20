@@ -1,16 +1,72 @@
+# =========================
+# Java
+# =========================
+*.class
 
+# =========================
+# Maven
+# =========================
 target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# =========================
+# IDE - Eclipse
+# =========================
 .classpath
 .project
 .settings/
-*.class
 
-test-output/
-reports/
-screenshots/
-
+# =========================
+# IDE - IntelliJ
+# =========================
 .idea/
 *.iml
 
-.DS_Store
+# =========================
+# VS Code
+# =========================
+.vscode/
 
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Test Reports
+# =========================
+test-output/
+
+# =========================
+# Extent Reports
+# =========================
+reports/
+extent-report/
+test-results/
+
+# =========================
+# Screenshots
+# =========================
+screenshots/
+screenshots/**
+*.png
+*.jpg
+*.jpeg
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.temp

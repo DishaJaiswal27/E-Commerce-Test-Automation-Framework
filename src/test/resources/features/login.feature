@@ -1,9 +1,17 @@
-Feature: User Login
+Feature: User Authentication
 
-  As a registered customer
-  I want to login to Demo Web Shop
-  So that I can access my account
+  Scenario Outline: Verify user can login and logout successfully
 
-  Scenario: Verify Demo Web Shop login page
     Given user is on the Demo Web Shop login page
-    Then login page should be displayed
+
+    When user logs in with "<email>" and "<password>"
+
+    Then user should be logged in successfully
+
+    When user logs out
+
+    Then user should be logged out successfully
+
+    Examples:
+      | email              	| password           |
+      | Demon123@gmail.com  | Demon123@gmail.com |
